@@ -1,0 +1,121 @@
+set serveroutput on;
+declare
+n_sales number:=20000;
+n number(6):='&N';
+begin 
+if n_sales>n then
+    dbms_output.put_line('Greater ');
+elsif n_sales<n then
+    dbms_output.put_line('lesser');
+else
+dbms_output.put_line('equals');
+end if;
+end;
+/
+
+set serveroutput on;
+declare
+    grade char(1):='&GRADE';
+begin
+    case grade 
+        when 'A' then dbms_output.put_line('Excellent'||grade);
+        when 'B' then dbms_output.put_line('good'||grade);
+    end case;
+end;
+/
+
+set serveroutput on;
+declare
+ a number:='&a';
+begin 
+<<first>>
+ while a < 20  loop  
+    a:=a+1;
+    if a =15 then 
+    a:=a+1;
+    goto first;
+    end if;
+    end loop;
+    end;
+    /
+
+set serveroutput on;
+declare
+num_small number :=8;
+num_larg number:=5;
+num_temp number;
+begin
+    if num_small > num_larg then 
+    num_temp := num_small;
+    num_small :=num_larg;
+    num_larg :=num_temp;
+    dbms_output.put_line('smallest number is'||num_small);
+    dbms_output.put_line('Greatest number is'||num_larg);
+    else
+    dbms_output.put_line('smallest number is'||num_small);
+    dbms_output.put_line('Greatest number is'||num_larg);
+end if;
+end;
+/
+
+set serveroutput on;
+declare
+num number:='&num';
+begin
+    if num mod 2 =0 then
+        dbms_output.put_line('num '||num||'is even');
+    else
+        dbms_output.put_line('num '||num||'is odd');
+    end if;
+end;
+/
+set serveroutput on;
+declare 
+dt1 DATE := to_date('&new_dt','dd-mm-yy');
+get_day varchar2(15):=rtrim(to_char(dt1,'DAY'));
+begin
+
+if get_day in ('SATURDAY','SUNDAY') then
+    dbms_output.put_line('The day of the given date is '
+    ||get_day||' and its falls on weekend');
+else
+    dbms_output.put_line('The day of the given date is '
+    ||get_day||' and its dont falls on weekend');
+end if;
+end;
+/
+
+
+set serveroutput on;
+declare
+tot_emp number;
+begin
+select count(*) into tot_emp from emp e join 
+dept d on e.deptno=d.deptno where e.deptno=20;
+if tot_emp >=40 then 
+dbms_output.put_line('There are no vaccancies in
+department 40');
+else
+dbms_output.put_line('There are some vaccancies in
+department 40');
+end if;
+end;
+/
+
+
+
+SET serveroutput on;
+declare
+grade char(1) :='&GRADE';
+begin
+case grade
+    when 'A' then dbms_output.put_line('A grade');
+    when 'B' then dbms_output.put_line('B grade');
+    when 'C' then dbms_output.put_line('C grade');
+    when 'D' then dbms_output.put_line('D grade');
+    else dbms_output.put_line('Failed');
+    end case;
+end;
+
+
+
