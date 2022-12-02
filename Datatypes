@@ -1,0 +1,70 @@
+set serveroutput on;
+declare
+no number(10);
+name varchar2(10);
+begin
+select empno,ename into no,name from emp where ename='MARTIN';
+insert into empd values(no,name);
+end;
+
+set serveroutput on;
+declare
+no number(10);
+name varchar2(10);
+name1 varchar2(10):='&NAMe';
+begin
+select empno,ename into no,name from emp where ename='MARTIN';
+if name1=name then insert into empd values(no,name);
+end if;
+end;
+
+Data Types – give you a brief overview of PL/SQL data types including number, Boolean, character, and datetime.
+
+SET SERVEROUTPUT ON
+DECLARE
+rno number(3);
+BEGIN
+select rollno into rno from student where sname='SRAVANI';
+dbms_output.put_line('19K61A0'||rno);
+END;
+
+SET SERVEROUTPUT ON
+DECLARE
+stdname varchar2(20);
+rno number(3);
+BEGIN
+select sname,rollno into stdname,rno from student where rollno=501;
+dbms_output.put_line('The student '||stdname||' roll number is 19K61A0'||rno);
+END;
+
+SET SERVEROUTPUT ON
+DECLARE
+dt1 DATE := TO_DATE('&new_dt','DD-MON-YYYY');
+get_day VARCHAR2(15);
+BEGIN
+    get_day := RTRIM(TO_CHAR(dt1,'DAY'));
+    IF(get_day IN ('SATURDAY','SUNDAY')) THEN 
+        dbms_output.put_line('The day of the given date is '||get_day||' and it falls on the weekend');
+    ELSE
+        dbms_output.put_line('The day of the given date is '||get_day||' and it does not falls on the weekend');
+    END IF;
+    dbms_output.put_line('Execution done successfully');
+END;
+
+
+select * from empd;
+
+set serveroutput on;
+declare
+n number(2) :='&number';
+begin
+for i in 2..N/2 loop
+if i mod n=0 then 
+dbms_output.put_line('Not a prime number');
+exit;
+else
+dbms_output.put_line('Prime number');
+exit;
+end if;
+end loop;
+end;
