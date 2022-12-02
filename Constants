@@ -1,0 +1,22 @@
+set serveroutput on;
+declare
+n number(2) :='&NUmber';
+x number:=0;
+begin
+for i in 1..n loop
+dbms_output.put_line(x);
+x:=x+3;
+
+end loop;
+end;
+
+
+set serveroutput on;
+declare
+num number(5):='&NUMBER';
+begin
+if num>0 then dbms_output.put_line('positive');
+elsif num>0 then dbms_output.put_line('negative');
+else dbms_output.put_line('Equal to zero');
+end if;
+end;
