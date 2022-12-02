@@ -1,0 +1,16 @@
+Oracle PL/SQL is an extension of SQL language that combines the data manipulation power of SQL with the processing power
+of procedural language to create super powerful SQL queries. 
+PL/SQL ensures seamless processing of SQL statements by enhancing the security, portability, and robustness of the Database.
+
+PL/SQL means instructing the compiler ‘what to do’ through SQL and ‘how to do’ through its procedural way.
+Similar to other database languages, it gives more control to the programmers by the use of loops, conditions and object-oriented concepts.
+The PL/SQL Full form is “Procedural Language extensions to SQL”.
+
+PL/SQL Full Form
+PL/SQL stands for “Procedural Language extensions to the Structured Query Language.” 
+PL/SQL is Oracle Corporation’s procedural extension for SQL and the Oracle relational database. 
+It is a high-performance, highly integrated database language.
+
+PL/SQL Developer is a free Integrated Development Environment provided by Oracle to develop Software in Oracle Database environment 
+and perform various Database tasks with ease. 
+The PL/SQL Developer IDE provides with GUI and Plugins to use in order to help the end users save the time on their Database tasks.
