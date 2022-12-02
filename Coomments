@@ -1,0 +1,19 @@
+SQL Comments are used to explain the sections of the SQL statements, and used to prevent the statements of SQL. 
+In many programming languages, comments matter a lot.
+There are three types of comments, which are given below:
+
+Single line comments.
+Multi-line comments
+Inline comments
+
+Single Line Comment
+Comments starting and ending with a single line are said as individual line comments. 
+The line which starts with '–' is a single line comment, and that particular line is not executed.
+The text between -- and end of the line is ignored and cannot be executed.
+
+Multi-line Comments
+Comments that start in one line and end in different front are said as multi-line comments. The text between /* and */ is ignored in the code part.
+The line starting with '/*' is considered as a starting point of comment and terminated when '*/' lies at the end.
+
+Inline comments:
+Inline comments are an extension of multi-line comments, and comments can be stated between the statements and are enclosed in between '/*' and '*/.'
